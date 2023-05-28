@@ -21,25 +21,20 @@ const ProductPage = ()=>{
        
     },[])
 
-    const drawProduct = ({row})=>{
+    const drawProduct = ()=>{
         <>
-            {row.map((item)=>{
+            {productLists.map((item)=>{
                 <ProductCard productData={item}></ProductCard>
             })}
             
         </>
     }
 
-    function drawTitle({title,setTitle}){
-        <>
-            <h1>{title}fdf</h1>
-        </>
-    }
 
 
     return (
         <div key='product'>
-           
+            {drawProduct}
         </div>
     );
 };
